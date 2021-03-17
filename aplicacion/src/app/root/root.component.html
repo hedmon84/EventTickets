@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">Tickets Basket</h1>
+
+<div class="table-content">
+
+
+  <div class="container">
+     <div class="row mt-3">
+       <div class="col-4" *ngFor="let basket of basketitems" >
+         <div class="card"> 
+          <div class="card-body">
+
+            <h3 class="card-title">Available {{basket.ticketAmount}}</h3>
+            <p class="card-subtitle text-muted mb-2">
+              Event: {{basket.event.name}}
+            </p>
+
+            <button (click)="Comprar_basket($event,basket.basketId)" type="button"
+            class="btn lo2 btn-outline-success "> ${{basket.price}} Buy
+          </button>
+
+          
+
+          </div>
+
+          
+
+
+         </div>
+
+
+
+       </div>
+
+     </div>
+  </div>
+
+
+
+</div>
+<div>
+  <app-message></app-message>
+</div>
